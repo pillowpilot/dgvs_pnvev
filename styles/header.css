@@ -1,0 +1,65 @@
+.header
+{
+    display: grid;
+    grid-template-rows: 66px 97px 40px;
+}
+
+.header-content-centering
+{
+    padding: 0 18%;
+}
+
+.header-logos
+{
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 8px 0;
+    background-color: rgb(228, 231, 235);
+}
+
+.header-title
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: rgb(3, 32, 73);
+}
+
+.header-title h1
+{
+    text-align: center;
+    padding: 8px 0 8px 0;
+    margin: 0;
+    color: white;
+    font-family: 'Montserrat', sans;
+    font-weight: 400;
+}
+
+.header-navbar
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(53, 76, 109);
+    color: #e4e7eb;
+}
+
+.navbar-item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 8px 0 8px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.navbar-item:hover
+{
+    background-color: #677891;
+}
+
+.navbar-item a
+{
+    color: #e4e7eb;
+    text-decoration: none;
+    font-family: 'Montserrat', sans;
+}
