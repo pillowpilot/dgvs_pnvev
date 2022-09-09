@@ -1,4 +1,4 @@
-.header
+body > header
 {
     display: grid;
     grid-template-rows: 66px 97px 40px;
@@ -35,7 +35,7 @@
     font-weight: 400;
 }
 
-.header-navbar
+body > header > nav
 {
     display: flex;
     flex-direction: row;
