@@ -4,9 +4,20 @@ body > header
     grid-template-rows: 66px 97px 40px;
 }
 
-.header-content-centering
+@media screen and (min-width: 380px) and (max-width: 899px)
 {
-    padding: 0 18%;
+    .header-content-centering
+    {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 900px)
+{
+    .header-content-centering
+    {
+        padding: 0 18%;
+    }
 }
 
 .header-logos
@@ -31,7 +42,7 @@ body > header
     padding: 8px 0 8px 0;
     margin: 0;
     color: white;
-    font-family: 'Montserrat', sans;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -43,13 +54,23 @@ body > header > nav
     color: #e4e7eb;
 }
 
+body > header > nav a /* Apply every level of the navbar */
+{
+    color: #e4e7eb;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
 .navbar-item
 {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 8px 0 8px;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.18s;
 }
 
 .navbar-item:hover
@@ -57,9 +78,35 @@ body > header > nav
     background-color: #677891;
 }
 
-.navbar-item a
+.navbar-item i
 {
-    color: #e4e7eb;
-    text-decoration: none;
-    font-family: 'Montserrat', sans;
+    margin-right: 8px;
+}
+
+.navbar-menu
+{
+    position: relative;
+}
+
+.navbar-options
+{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 160px;
+    background-color: #354c6d;
+    flex-direction: column;
+}
+
+.navbar-menu:hover .navbar-options
+{
+    display: flex;
+}
+
+.navbar-option
+{
+    height: 40px;
+    display: flex;
+    align-items: center;
 }

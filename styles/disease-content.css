@@ -34,7 +34,10 @@ main > .article-wrapper:last-child
 main article
 {
     background-color: #ffffff;
-    padding-bottom: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 main article > header
