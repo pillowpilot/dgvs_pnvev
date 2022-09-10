@@ -70,7 +70,7 @@ body > header > nav a /* Apply every level of the navbar */
     flex-direction: row;
     align-items: center;
     padding: 0 8px 0 8px;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.18s;
+    transition: background-color 100ms ease-in-out;
 }
 
 .navbar-item:hover
@@ -90,23 +90,30 @@ body > header > nav a /* Apply every level of the navbar */
 
 .navbar-options
 {
-    display: none;
     position: absolute;
     left: 0;
     top: 100%;
-    width: 160px;
-    background-color: #354c6d;
+    display: flex;
     flex-direction: column;
+    /* width: min(max-content, 100%) */
+    min-width: max-content;
+    width: 100%; 
+    background-color: #354c6d;
+    opacity: 0;
+    pointer-events: none; /* do not interact with pointer */
+    transition: opacity 100ms ease-in-out;
 }
 
 .navbar-menu:hover .navbar-options
 {
-    display: flex;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .navbar-option
 {
     height: 40px;
+    padding-right: 0.8em;
     display: flex;
     align-items: center;
 }
