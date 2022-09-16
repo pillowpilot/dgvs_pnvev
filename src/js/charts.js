@@ -117,23 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        var geodata = [
-            ['DE.SH', 728],
-            ['DE.BE', 710],
-            ['DE.MV', 963],
-            ['DE.HB', 541],
-            ['DE.HH', 622],
-            ['DE.RP', 866],
-            ['DE.SL', 398],
-            ['DE.BY', 785],
-            ['DE.SN', 223],
-            ['DE.ST', 605],
-            ['DE.NW', 237],
-            ['DE.BW', 157],
-            ['DE.HE', 134],
-            ['DE.NI', 136],
-            ['DE.TH', 704],
-            ['DE.', 361]
+        const data = [
+            ['py-ag', 10], ['py-bq', 11], ['py-cn', 12], ['py-ph', 13],
+            ['py-cr', 14], ['py-sp', 15], ['py-ce', 16], ['py-mi', 17],
+            ['py-ne', 18], ['py-gu', 19], ['py-pg', 20], ['py-am', 21],
+            ['py-aa', 22], ['py-cg', 23], ['py-cz', 24], ['py-cy', 25],
+            ['py-it', 26], ['py-as', 27]
         ];
 
     fetch('data/py-all.topo.json')
@@ -145,11 +134,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
         
                 title: {
-                    text: 'GeoJSON in Highmaps'
+                    text: 'Demo de Mapa temático proporcional/calor (Columna 1 de la tabla de requerimientos)',
                 },
         
-                accessibility: {
-                    typeDescription: 'Map of Germany.'
+                subtitle: {
+                    text: '<strong>Paraguay</strong>'
                 },
         
                 mapNavigation: {
@@ -160,22 +149,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
         
                 colorAxis: {
-                    tickPixelInterval: 100
+                    min: 0
                 },
         
                 series: [{
-                    data: [],
-                    keys: ['code_hasc', 'value'],
-                    joinBy: 'code_hasc',
-                    name: 'Random data',
+                    data: data,
+                    name: 'Datos aleatorios!',
                     states: {
                         hover: {
-                            color: '#a4edba'
+                            color: '#BADA55'
                         }
                     },
                     dataLabels: {
                         enabled: true,
-                        format: '{point.properties.postal}'
+                        format: '{point.name}'
                     }
                 }]
             });
