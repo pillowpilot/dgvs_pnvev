@@ -1,0 +1,82 @@
+{{% BLOCKS }}
+{{!
+    Variables to indicate the active item in the menu
+    index: Main page
+    hantavirus: Hantavirus disease page
+    malaria: Malaria disease page
+    leptopirosis: Leptospirosis disease page
+    leishmaniasis: Leishmaniasis disease page (menu)
+    leishmaniasismucosa: Leishmaniasis mucosa page
+    leishmaniasiscutanea: Leishmaniasis cutanea page
+    leishmaniasisvisceral: Leishmaniasis visceral page
+    chagas: Chagas disease page (menu)
+    chagasagudo: Chagas acute page
+    chagascronico: Chagas chronic page
+    chagascongenito: Chagas congenital page
+}}
+<header>
+    <div class="header-content-centering header-logos">
+        <img src="images/logos-cabecera.svg" alt="logos">
+    </div>
+    <div class="header-content-centering header-title">
+        <h1>Tablero de Programa Nacional de Enfermedades Vectoriales</h1>
+    </div>
+    <nav class="header-content-centering">
+        <a href="index.php">
+            <div class="navbar-item {{# index}} navbar-active-item {{/ index}}"><i class="bi-house-fill"></i><span>Tablero Principal</span></div>
+        </a>
+        <a href="disease.php?disease=hantavirus">
+            <div class="navbar-item {{# hantavirus}} navbar-active-item {{/ hantavirus}}"><i class="bi-graph-up"></i><span>Hantavirus</span></div>
+        </a>
+        <a href="disease.php?disease=malaria">
+            <div class="navbar-item {{# malaria}} navbar-active-item {{/ malaria}}"><i class="bi-graph-up"></i><span>Malaria</span></div>
+        </a>
+        <a href="disease.php?disease=leptopirosis">
+            <div class="navbar-item {{# leptopirosis}} navbar-active-item {{/ leptopirosis}}"><i class="bi-graph-up"></i><span>Leptopirosis</span></div>
+        </a>
+        <a href="#">
+            <div class="navbar-item navbar-menu">
+                <i class="bi-graph-up"></i><span>Leishmaniasis</span>
+                <div class="navbar-options">
+                    <a href="disease.php?disease=leishmaniasismucosa">
+                        <div class="navbar-item {{# leishmaniasismucosa}} navbar-active-item {{/ leishmaniasismucosa}} navbar-option">
+                            <i class="bi-graph-up"></i><span>L. Mucosa</span>
+                        </div>
+                    </a>
+                    <a href="disease.php?disease=leishmaniasiscutanea">
+                        <div class="navbar-item {{# leishmaniasiscutanea}} navbar-active-item {{/ leishmaniasiscutanea}} navbar-option">
+                            <i class="bi-graph-up"></i><span>L. Cutanea</span>
+                        </div>
+                    </a>
+                    <a href="disease.php?disease=leishmaniasisvisceral">
+                        <div class="navbar-item  {{# leishmaniasisvisceral}} navbar-active-item {{/ leishmaniasisvisceral}} navbar-option">
+                            <i class="bi-graph-up"></i><span>L. Viseral</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="navbar-item navbar-menu">
+                <i class="bi-graph-up"></i><span>Chagas</span>
+                <div class="navbar-options">
+                    <a href="disease.php?disease=chagasagudo">
+                        <div class="navbar-item {{# chagasagudo}} navbar-active-item {{/ chagasagudo}} navbar-option">
+                            <i class="bi-graph-up"></i><span>C. Agudo</span>
+                        </div>
+                    </a>
+                    <a href="disease.php?disease=chagascronico">
+                        <div class="navbar-item {{# chagascronico}} navbar-active-item {{/ chagascronico}} navbar-option">
+                            <i class="bi-graph-up"></i><span>C. Crónico</span>
+                        </div>
+                    </a>
+                    <a href="disease.php?disease=chagascongenito">
+                        <div class="navbar-item {{# chagascongenito}} navbar-active-item {{/ chagascongenito}} navbar-option">
+                            <i class="bi-graph-up"></i><span>C. Congénito</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </a>
+    </nav>
+</header>

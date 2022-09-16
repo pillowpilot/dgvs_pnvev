@@ -1,0 +1,4 @@
+{
+"SELECT e.date , e.epiweek \nFROM frm_fleishmaniasis ff\nINNER JOIN epiweek e \nON DATE(ff.FechaCarga) = e.date\nWHERE ff.ClasificacionFinal = 'CONFIRMADO'\nAND ff.TipoEntrada = 'Caso Nuevo'\nAND ff.TipoFicha = 'VICERALH'": [
+
+]}

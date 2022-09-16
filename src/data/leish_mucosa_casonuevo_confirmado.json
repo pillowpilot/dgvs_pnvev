@@ -1,0 +1,191 @@
+{
+"SELECT e.date , e.epiweek \nFROM frm_fleishmaniasis ff\nINNER JOIN epiweek e \nON DATE(ff.FechaCarga) = e.date\nWHERE ff.ClasificacionFinal = 'CONFIRMADO'\nAND ff.TipoEntrada = 'Caso Nuevo'\nAND ff.TipoFicha = 'MUCOSA'": [
+	{
+		"date" : "2019-08-01",
+		"epiweek" : 31
+	},
+	{
+		"date" : "2019-08-16",
+		"epiweek" : 33
+	},
+	{
+		"date" : "2019-09-20",
+		"epiweek" : 38
+	},
+	{
+		"date" : "2019-10-11",
+		"epiweek" : 41
+	},
+	{
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"date" : "2019-11-25",
+		"epiweek" : 48
+	},
+	{
+		"date" : "2019-11-25",
+		"epiweek" : 48
+	},
+	{
+		"date" : "2019-12-10",
+		"epiweek" : 50
+	},
+	{
+		"date" : "2019-12-10",
+		"epiweek" : 50
+	},
+	{
+		"date" : "2020-03-17",
+		"epiweek" : 12
+	},
+	{
+		"date" : "2020-05-11",
+		"epiweek" : 20
+	},
+	{
+		"date" : "2020-05-11",
+		"epiweek" : 20
+	},
+	{
+		"date" : "2020-06-09",
+		"epiweek" : 24
+	},
+	{
+		"date" : "2020-06-09",
+		"epiweek" : 24
+	},
+	{
+		"date" : "2020-06-23",
+		"epiweek" : 26
+	},
+	{
+		"date" : "2020-07-20",
+		"epiweek" : 30
+	},
+	{
+		"date" : "2020-07-20",
+		"epiweek" : 30
+	},
+	{
+		"date" : "2020-12-31",
+		"epiweek" : 53
+	},
+	{
+		"date" : "2021-03-19",
+		"epiweek" : 11
+	},
+	{
+		"date" : "2021-03-22",
+		"epiweek" : 12
+	},
+	{
+		"date" : "2021-06-02",
+		"epiweek" : 22
+	},
+	{
+		"date" : "2021-07-19",
+		"epiweek" : 29
+	},
+	{
+		"date" : "2021-08-09",
+		"epiweek" : 32
+	},
+	{
+		"date" : "2021-08-27",
+		"epiweek" : 34
+	},
+	{
+		"date" : "2021-09-30",
+		"epiweek" : 39
+	},
+	{
+		"date" : "2021-10-08",
+		"epiweek" : 40
+	},
+	{
+		"date" : "2021-10-08",
+		"epiweek" : 40
+	},
+	{
+		"date" : "2021-10-25",
+		"epiweek" : 43
+	},
+	{
+		"date" : "2021-10-25",
+		"epiweek" : 43
+	},
+	{
+		"date" : "2021-11-18",
+		"epiweek" : 46
+	},
+	{
+		"date" : "2021-12-10",
+		"epiweek" : 49
+	},
+	{
+		"date" : "2022-02-21",
+		"epiweek" : 8
+	},
+	{
+		"date" : "2022-04-08",
+		"epiweek" : 14
+	},
+	{
+		"date" : "2022-04-22",
+		"epiweek" : 16
+	},
+	{
+		"date" : "2022-05-20",
+		"epiweek" : 20
+	},
+	{
+		"date" : "2022-05-20",
+		"epiweek" : 20
+	},
+	{
+		"date" : "2022-06-02",
+		"epiweek" : 22
+	},
+	{
+		"date" : "2022-06-10",
+		"epiweek" : 23
+	},
+	{
+		"date" : "2022-06-10",
+		"epiweek" : 23
+	},
+	{
+		"date" : "2022-07-04",
+		"epiweek" : 27
+	},
+	{
+		"date" : "2022-08-05",
+		"epiweek" : 31
+	},
+	{
+		"date" : "2022-08-10",
+		"epiweek" : 32
+	},
+	{
+		"date" : "2022-08-29",
+		"epiweek" : 35
+	}
+]}

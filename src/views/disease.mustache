@@ -1,0 +1,63 @@
+{{% BLOCKS }}
+{{< layout }}
+
+{{$ stylesheets }}
+<link rel="stylesheet" href="styles/disease-content.css">
+{{/ stylesheets }}
+
+{{$ scripts }}
+<script>
+    const diseaseTitle = '{{title}}';
+    const tendenciaDataURL = '{{tendenciaDataURL}}';
+    const barHorizontalDataURL = '{{barHorizontalDataURL}}';
+</script>
+<script src="js/highcharts/highcharts.js"></script>
+<script src="js/highcharts/modules/exporting.js"></script>
+<script src="js/highcharts/modules/export-data.js"></script>
+<script src="js/highcharts/modules/accessibility.js"></script>
+<script src="js/highcharts/modules/no-data-to-display.js"></script>
+<script src="js/highcharts/themes/avocado.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="js/utils.js" type="module"></script>
+<script src="js/charts.js" type="module"></script>
+{{/ scripts }}
+
+{{$ main }}
+<main>
+    <div class="article-wrapper">
+        <article class="canal-endemico">
+            <header>Gráfico de tendencia en el tiempo por S.E.</header>
+            <section class="filters"></section>
+            <section id="tendencia" class="graphics"></section>
+            <footer>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <span><strong>Fuente:</strong>DGVS (yyyy/mm/dd)</span>
+            </footer>
+        </article>
+    </div>
+    <div class="article-wrapper">
+        <article class="tendencias">
+            <header>Barras Horizontales (apiladas) distribución por rango de edad y sexo</header>
+            <section class="filters"></section>
+            <section id="barHorizontal"></section>
+            <footer>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <span><strong>Fuente:</strong>DGVS (yyyy/mm/dd)</span>
+            </footer>
+        </article>
+    </div>
+    <div class="article-wrapper">
+        <article class="casos">
+            <header>Titulo de Articulo</header>
+            <section class="filters"></section>
+            <section class="graphics"></section>
+            <footer>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <span><strong>Fuente:</strong>DGVS (yyyy/mm/dd)</span>
+            </footer>
+        </article>
+    </div>
+</main>
+{{/ main }}
+
+{{/ layout }}

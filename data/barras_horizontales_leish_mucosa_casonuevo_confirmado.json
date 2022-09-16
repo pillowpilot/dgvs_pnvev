@@ -1,0 +1,332 @@
+{
+"SELECT ff.Sexo, ff.Edad, ff.GrupoEtareo, e.`date`, e.epiweek \nFROM frm_fleishmaniasis ff\nINNER JOIN epiweek e\nON DATE(ff.FechaCarga) = e.`date` \nWHERE ff.ClasificacionFinal = 'CONFIRMADO'\nAND ff.TipoEntrada = 'Caso Nuevo'\nAND ff.TipoFicha = 'MUCOSA'": [
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 43,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2019-08-01",
+		"epiweek" : 31
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 70,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-08-16",
+		"epiweek" : 33
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 36,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2019-09-20",
+		"epiweek" : 38
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 55,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-10-11",
+		"epiweek" : 41
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 46,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 76,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 59,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 62,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 69,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-11-22",
+		"epiweek" : 47
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 55,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2019-11-25",
+		"epiweek" : 48
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 52,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2019-11-25",
+		"epiweek" : 48
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 60,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-12-10",
+		"epiweek" : 50
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 72,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2019-12-10",
+		"epiweek" : 50
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 36,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2020-03-17",
+		"epiweek" : 12
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 55,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2020-05-11",
+		"epiweek" : 20
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 60,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2020-05-11",
+		"epiweek" : 20
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 76,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2020-06-09",
+		"epiweek" : 24
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 63,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2020-06-09",
+		"epiweek" : 24
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 87,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2020-06-23",
+		"epiweek" : 26
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 57,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2020-07-20",
+		"epiweek" : 30
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 54,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2020-07-20",
+		"epiweek" : 30
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 65,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2020-12-31",
+		"epiweek" : 53
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 42,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-03-19",
+		"epiweek" : 11
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 59,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-03-22",
+		"epiweek" : 12
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 83,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2021-06-02",
+		"epiweek" : 22
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 54,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-07-19",
+		"epiweek" : 29
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 31,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2021-08-09",
+		"epiweek" : 32
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 50,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-08-27",
+		"epiweek" : 34
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 51,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-09-30",
+		"epiweek" : 39
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 54,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-10-08",
+		"epiweek" : 40
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 30,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2021-10-08",
+		"epiweek" : 40
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 999,
+		"GrupoEtareo" : null,
+		"date" : "2021-10-25",
+		"epiweek" : 43
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 57,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-10-25",
+		"epiweek" : 43
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 64,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2021-11-18",
+		"epiweek" : 46
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 55,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2021-12-10",
+		"epiweek" : 49
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 61,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-02-21",
+		"epiweek" : 8
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 81,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-04-08",
+		"epiweek" : 14
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 26,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2022-04-22",
+		"epiweek" : 16
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 55,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2022-05-20",
+		"epiweek" : 20
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 70,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-05-20",
+		"epiweek" : 20
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 56,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2022-06-02",
+		"epiweek" : 22
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 78,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-06-10",
+		"epiweek" : 23
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 69,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-06-10",
+		"epiweek" : 23
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 56,
+		"GrupoEtareo" : "40 a 59",
+		"date" : "2022-07-04",
+		"epiweek" : 27
+	},
+	{
+		"Sexo" : "FEMENINO",
+		"Edad" : 81,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-08-05",
+		"epiweek" : 31
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 67,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-08-10",
+		"epiweek" : 32
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 73,
+		"GrupoEtareo" : "60 y mas",
+		"date" : "2022-08-29",
+		"epiweek" : 35
+	}
+]}

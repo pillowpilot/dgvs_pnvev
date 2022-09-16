@@ -1,0 +1,35 @@
+body > footer
+{
+    display: grid;
+    grid-template: 300px / 610px 610px;
+    grid-gap: 20px;
+    justify-content: center;
+    background-color: #19232d;
+}
+
+body > footer > section
+{
+    margin: 20px 0 20px 0;
+}
+
+body > footer > section > h3
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #c5c7cb;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(37, 52, 67);
+}
+
+.footer-intereses
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-intereses a
+{
+    margin-bottom: 24px;
+}
