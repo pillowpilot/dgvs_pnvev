@@ -28,7 +28,28 @@
     <div class="article-wrapper">
         <article class="canal-endemico">
             <header>Gráfico de tendencia en el tiempo por S.E.</header>
-            <section class="filters"></section>
+            <section class="filters">
+                {{! <div class="filter">
+                    <select>
+                        <option value="optionA">optionA</option>
+                        <option value="optionB">optionB_largotexto</option>
+                        <option value="optionC">optionC</option>
+                        <option value="optionD">optionD</option>
+                        <option value="optionA">optionA</option>
+                        <option value="optionB">optionB</option>
+                        <option value="optionC">optionC</option>
+                        <option value="optionD">optionD</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <select>
+                        <option value="optionA">optionA</option>
+                        <option value="optionB">optionB</option>
+                        <option value="optionC">optionC</option>
+                        <option value="optionD">optionD</option>
+                    </select>
+                </div> }}
+            </section>
             <section id="tendencia" class="graphics"></section>
             <footer>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -39,7 +60,16 @@
     <div class="article-wrapper">
         <article class="tendencias">
             <header>Barras Horizontales (apiladas) distribución por rango de edad y sexo</header>
-            <section class="filters"></section>
+            <section class="filters">
+                <div class="filter">    
+                    <select name="horizontalBars-ageGroup">
+                    </select>
+                </div>
+                <div class="filter">
+                    <select name="horizontalBars-sex">
+                    </select>
+                </div>
+            </section>
             <section id="barHorizontal" class="graphics"></section>
             <footer>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>

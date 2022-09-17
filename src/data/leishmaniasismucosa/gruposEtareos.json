@@ -1,0 +1,20 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "text": "Sin datos"
+        },
+        {
+            "id": 2,
+            "text": "20 a 39 años"
+        },
+        {
+            "id": 3,
+            "text": "40 a 59 años"
+        },
+        {
+            "id": 3,
+            "text": "60 o más años"
+        }
+    ]
+}

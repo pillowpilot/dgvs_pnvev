@@ -1,0 +1,100 @@
+[
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 39,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2019-07-12",
+		"epiweek" : 28
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 28,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2019-10-23",
+		"epiweek" : 43
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 30,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2019-11-25",
+		"epiweek" : 48
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 30,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2020-05-11",
+		"epiweek" : 20
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 27,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2020-05-11",
+		"epiweek" : 20
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 25,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2020-06-09",
+		"epiweek" : 24
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 30,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2020-07-31",
+		"epiweek" : 31
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 34,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2020-12-24",
+		"epiweek" : 52
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 35,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2021-04-15",
+		"epiweek" : 15
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 38,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2021-06-28",
+		"epiweek" : 26
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 39,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2021-10-25",
+		"epiweek" : 43
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 38,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2021-10-25",
+		"epiweek" : 43
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 33,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2022-04-11",
+		"epiweek" : 15
+	},
+	{
+		"Sexo" : "MASCULINO",
+		"Edad" : 20,
+		"GrupoEtareo" : "20 a 39",
+		"date" : "2022-08-29",
+		"epiweek" : 35
+	}
+]

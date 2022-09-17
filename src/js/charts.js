@@ -7,16 +7,57 @@ Highcharts.setOptions({
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    $('select[name="horizontalBars-ageGroup"]').select2({
+        ajax: {
+            url: 'data/leishmaniasismucosa/gruposEtareos.json',
+            dataType: 'json',
+        },
+        placeholder: 'Grupo Etareo',
+    });
+    $('select[name="horizontalBars-sex"]').select2({
+        ajax: {
+            url: 'data/leishmaniasismucosa/sexo.json',
+            dataType: 'json',
+        },
+        placeholder: 'Sexo',
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     fetch(tendenciaDataURL)
         .then(res => res.json())
         .then(data => {
             data = data[Object.keys(data)[0]];
+            console.log(data);
+
+            const groupedByYear = _(data).groupBy(o => (new Date(o.date)).getFullYear()).value();
+            console.log(groupedByYear);
+
+            const x1 = _(groupedByYear).mapValues(yearData => _(yearData).countBy('epiweek').value()).value(); 
+            console.log('x1', x1);
+            const x2 = _(x1).mapValues((yearData, year) => ({
+                name: year,
+                data: _(yearData).reduce((acc, y, x) => {
+                    acc.push([x, y])
+                    return acc;
+                }, [])
+            })).value();
+            console.log('x2', x2);
+            const x3 = _(x2).reduce((acc, yd) => {
+                acc.push(yd);
+                return acc;
+            }, []);
+            console.log('x3', x3);
 
             const grouped = _(data).groupBy(o => o['date']).value();
             const points = Object.keys(grouped).map(k => [k, grouped[k].length]);
-
             console.log(points);
             console.log(grouped);
+
+            let epiweeks = [];
+            for(let i = 1 ; i < 53; ++i)
+                epiweeks.push("" + i);
+            console.log(epiweeks);
 
             const chart = Highcharts.chart('tendencia', {
                 chart: {
@@ -27,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     style: chartTitleStyle,
                 },
                 xAxis: {
-                    categories: Object.keys(grouped),
+                    categories: epiweeks,
                     labels: {
                         style: chartXLabelStyle,
                     }
@@ -42,59 +83,70 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: '<strong>Lorem.</strong><br><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em>',
                     style: chartCaptionStyle,
                 },
-                series: [{
-                    name: diseaseTitle,
-                    data: points,
-                    color: 'red'
-                }]
+                series: x3
             });
+
+            // x3.forEach(e =>
+            //     chart.addSeries(e)
+            // );
+
+            // setTimeout(() => {
+            //     chart.addSeries({
+            //     name: diseaseTitle,
+            //     data: points,
+            //     color: 'red'
+            // })
+            // }, 1500);
+            
         });
 
-    fetch(barHorizontalDataURL)
+    fetch('data/leishmaniasismucosa/barras_horizontales_leish_mucosa_casonuevo_confirmado_masculino_20-a-39.json')
         .then(res => res.json())
         .then(data => {
-            data = data[Object.keys(data)[0]];
+            // console.log('Here!');
+            // console.log(data);
 
-            console.log(data);
+            const structuredData = 
+                _(data)
+                .groupBy(o => (new Date(o.date)).getFullYear())
+                .mapValues(yearData => 
+                    _(yearData)
+                    .groupBy(o => o.epiweek)
+                    .mapValues(l => l.length)
+                    .value())
+                .value()
 
-            const possibleValues = {
-                'sexo': _(data).map(o => o['Sexo'] || 'Sin Datos').uniq().value(),
-                'grupoEtareo': _(data).map(o => o['GrupoEtareo'] || 'Sin Datos').uniq().value(),
-            }
+            // console.log(
+            //     'struct data',
+            //     structuredData
+            // );
 
-            console.log(possibleValues);
-
-            const sexoValue = possibleValues['sexo'][0];
-            const grupoEtareoValue = possibleValues['grupoEtareo'][0];
-            const filtered = _(data)
-                .filter(o => o['Sexo'] === sexoValue && o['GrupoEtareo'] === grupoEtareoValue)
-                .sortBy(o => o['date'])
+            const seriesData = _(structuredData)
+                .mapValues((yearData) => 
+                    _(yearData)
+                        .reduce((acc, y, x) => {
+                            acc.push([x, y]);
+                            return acc;
+                        }, [])
+                )
                 .value();
-
-            console.log(filtered);
-
-            const grouped = _(filtered).groupBy(o => o['date']).value();
-            const points = Object.keys(grouped).map(k => [k, grouped[k].length]);
-            console.log(points);
-            const cumulative = points.reduce((prev, curr) => {
-                return [
-                    ...prev,
-                    [
-                        curr[0],
-                        (prev[prev.length - 1] || [0, 0])[1] + curr[1]
-                    ]]
+            // console.log(seriesData);
+            const series = _(seriesData).reduce((acc, data_, year) => {
+                acc.push({name: year, data: data_})
+                return acc;
             }, []);
-            console.log(cumulative);
+            
+            // console.log(series);
+
             const chart = Highcharts.chart('barHorizontal', {
                 chart: {
-                    type: 'bar'
+                    type: 'column'
                 },
                 title: {
                     text: `Barras Horizontales de ${diseaseTitle} (Columna 4 de la tabla de requerimientos)`,
                     style: chartTitleStyle,
                 },
                 xAxis: {
-                    categories: _(filtered).map(o => o['date']).value(),
                     labels: {
                         style: chartXLabelStyle,
                     }
@@ -109,11 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: '<strong>Lorem.</strong><br><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em>',
                     style: chartCaptionStyle,
                 },
-                series: [{
-                    name: diseaseTitle,
-                    data: cumulative,
-                    color: 'red'
-                }]
+                series: series
             });
         });
 
